@@ -4,7 +4,7 @@ import { InjectModel } from '@nestjs/mongoose';
 import { Cat, CatDocument } from './schemas/cat.schema';
 
 @Injectable()
-export class CatsService {
+export class CatService {
   constructor(@InjectModel(Cat.name) private catModel: Model<CatDocument>) {}
 
   async create(data: Cat): Promise<Cat> {
